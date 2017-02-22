@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+ function validate(form) {
+ var e=form.elements;
+if(e['pwd'].value != e['cpwd'].value)
+{
+document.getElementById('error').innerHTML="Your password and confirm-password do not match. Please type more carefully.";
+    return false;
+}
+return true;
+ }
+ </script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<h1>Student Information</h1>
+<b>Please enter the following details to get registered</b>
+<form name="signupform" action="/StudentInfo/StudentRegistration" method="post" onsubmit="return validate(this)">
+<table>
+<tr>
+<td>Name : </td>
+<td><input type="text" name="name"></td>
+</tr>
+</br>
+<tr>
+<td>Roll No : </td>
+<td><input type="text" name="rollno"></td>
+</tr>
+</br>
+<tr>
+<td>Branch : </td>
+<td><input type="text" name="branch"></td>
+</tr>
+</br>
+<tr>
+<td>Marks : </td><td><input type="text" name="marks"></td></tr></br>
+<tr><td>Password : </td><td><input type="password" name="pwd"></td></tr></br>
+<tr><td>Confirm Password :</td><td> <input type="text" name="cpwd"></td></tr></br><div id="error"></div>
+</br>
+
+<tr ><td colspan="2"><input type="submit" value= "Signup" ></td></tr>
+</table>
+</form>
+</center>
+</body>
+</html>
