@@ -39,16 +39,10 @@ public class LoginValidation extends HttpServlet {
         	 {
         		 request.getSession().setAttribute("uid", "admin");
         		 System.err.println("test can see error messages if clause");
-        		 /*
-        	        pw.println("welcome User");
-        		 RequestDispatcher rd = request.getRequestDispatcher("html/LoginSuccessful.html");
-                 rd.forward(request, response);*/
         		 response.sendRedirect("jsp/LoginSuccesful.jsp");
         	 }
         	 else
         	 {
-        		 /*RequestDispatcher rd = request.getRequestDispatcher("html/LoginSuccessful.html");
-                 rd.forward(request, response);*/
                 response.sendRedirect("jsp/LoginFailed.html");
         	 }
         		 
@@ -65,30 +59,15 @@ public class LoginValidation extends HttpServlet {
         		 out.println("conn esta"+con);
         		 Statement st= con.createStatement();
         		 rs=st.executeQuery("select * from student");
-        		 while (rs.next()) 
-        		 {
-        			//out.println("vsluuuuuu"+ rs.getString(1));
-        		 }
         		 String query="select * from student where name="+""+huid;
         		 PreparedStatement ps= con.prepareStatement(query);
-        		 //ps.setString(1, "sandy");
         		ps.executeQuery();
         		prs=ps.getResultSet();
         		while (prs.next()) 
        		 {
-       			out.println("vsluuuuuu"+ prs.getString(1));
+       			out.println("Details"+ prs.getString(1));
        		 }
-        		 /*PreparedStatement s= con.prepareStatement("select * from student");
-        		 //s.setString(1,huid);
-        		 out.println("prepare statement created");
-        		  rs = s.executeQuery();
-        		 out.println("resultset"+rs.next()+"null / not"+rs.wasNull());
-        	        while (rs.next()) {
-        	        	out.println("in while");
-        	             password=rs.getString("password");
-        	            
-        	            out.println("pass"+password);
-        	 }*/
+        		 
         	            con.close();
         	            
         	 }
@@ -96,10 +75,7 @@ public class LoginValidation extends HttpServlet {
         	 {
         		 out.println("conn failed excception caUGHT:: "+e);
         	 }
-        	/* if(htpwd.equals(password))
-        	 {
-        		 response.sendRedirect("jsp/LoginSuccesful.jsp");
-        	 }*/
+        	
          }
 	}
 
