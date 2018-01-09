@@ -11,14 +11,4 @@
     <servlet-name>LoginValidation</servlet-name>
     <url-pattern>/LoginValidation</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>OneServlet</display-name>
-    <servlet-name>OneServlet</servlet-name>
-    <servlet-class>OneServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>OneServlet</servlet-name>
-    <url-pattern>/OneServlet</url-pattern>
-  </servlet-mapping>
 </web-app>
