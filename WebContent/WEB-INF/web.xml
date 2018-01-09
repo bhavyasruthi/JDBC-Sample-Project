@@ -11,4 +11,14 @@
     <servlet-name>LoginValidation</servlet-name>
     <url-pattern>/LoginValidation</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentRegistration</display-name>
+    <servlet-name>StudentRegistration</servlet-name>
+    <servlet-class>com.Servlets.StudentRegistration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentRegistration</servlet-name>
+    <url-pattern>/StudentRegistration</url-pattern>
+  </servlet-mapping>
 </web-app>
